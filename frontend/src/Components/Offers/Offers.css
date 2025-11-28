@@ -1,0 +1,129 @@
+.offers {
+  margin: 100px auto;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 6%;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #d23602 0%, #e1ffea22 60%);
+  gap: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.offers-left h1 {
+  color: #171717;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.offers-left h1 span {
+  display: inline-block;
+  color: #171717;
+  font-weight: 600;
+}
+
+.offers-left p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.offers-left button {
+  width: 200px;
+  height: 50px;
+  border-radius: 35px;
+  background: #ff4141;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.offers-left button:hover {
+  background: #e63636;
+}
+
+/* Image Container */
+.offers-image-wrapper {
+  width: 500px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.offers-image-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.offers-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1280px) {
+  .offers-left h1 {
+    font-size: 45px;
+  }
+
+  .offers-left p {
+    font-size: 14px;
+  }
+
+  .offers-left button {
+    width: 180px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .offers-image-wrapper {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .offers-image-wrapper {
+    width: 250px;
+  }
+}
+
+@media (max-width: 800px) {
+  .offers {
+    flex-direction: column;
+    padding: 40px 8%;
+    text-align: center;
+  }
+
+  .offers-image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  .offers-right {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
